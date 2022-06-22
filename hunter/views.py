@@ -10,3 +10,7 @@ def home(request):
 
     }
     return render(request,'home.html',context )
+
+
+def get_house(request,pk):
+    house = House.objects.get(id=pk)
