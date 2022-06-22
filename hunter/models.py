@@ -14,10 +14,11 @@ class House(models.Model):
     title = models.CharField(max_length=40)
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
-    type = models.Choices()
+    house_type = models.Choices()
     units = models.IntegerField()
     kitchen = models.IntegerField()
     parking = models.IntegerChoices()
+    house_location = models.OneToOneField(Location)
 
 
     def __str__(self):
