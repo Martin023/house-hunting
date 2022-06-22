@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Location(models.Model):
@@ -19,7 +20,7 @@ class House(models.Model):
     kitchen = models.IntegerField()
     parking = models.IntegerChoices()
     house_location = models.OneToOneField(Location)
-
+    house_image = CloudinaryField("house_image")
 
     def __str__(self):
 
