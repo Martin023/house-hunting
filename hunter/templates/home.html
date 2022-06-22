@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="navigation">
+        <div></div>
+    </div>
+    <div class="hero">
+
+    </div>
+    <div class="houses">
+        {% for house in houses %}
+        <p>{{ house.title }}</p>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
