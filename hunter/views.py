@@ -30,7 +30,7 @@ def get_house(request,pk):
 
 def update_house(request,pk):
     house = House.objects.get(id=pk)
-    form = HouseForm(instance=house)
+    form = HouseForm(request.POST,instance=house)
 
     if form.is_valid():
             house = form.save(commit=False)
@@ -46,3 +46,9 @@ def update_house(request,pk):
     }
 
     return render(request,'update_house.html',context)
+
+def delete_house(request,pk):
+    house = House.objects.get(id=pk)
+    house.delete()
+    
+    return redirect('homepage')
