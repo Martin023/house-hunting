@@ -25,8 +25,8 @@ class House(models.Model):
     bathrooms = models.IntegerField()
     house_type = models.CharField(max_length=20, choices=HOUSE_CHOICES)
     units = models.IntegerField()
-    kitchen = models.IntegerField(max_length=2)
-    parking = models.IntegerField(max_length=2)
+    kitchen = models.IntegerField()
+    parking = models.IntegerField()
     house_location = models.OneToOneField(Location,on_delete=models.DO_NOTHING)
     house_image = CloudinaryField("house_image")
 

@@ -1,3 +1,8 @@
-.forms{
-    max-height: 50vh!important;
+.top-nav{
+    display:flex;
+    justify-content: space-between;
+}
+.top-right{
+    display: flex;
+    gap: 5px;
 }

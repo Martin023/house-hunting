@@ -7,10 +7,12 @@
 
 <div class=" forms ">
     <div class=" addhouse">
-        <form action="" method="POST">
+        <h4 align="center"style='margin-top:2%'>Add a House</h4>
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
     
             {{ form.as_p }}
+
             <button type="submit" class="btn btn-sucess"> Add a house</button>
         </form>
     </div>
