@@ -29,6 +29,7 @@ class House(models.Model):
     parking = models.IntegerField()
     house_location = models.OneToOneField(Location,on_delete=models.DO_NOTHING)
     house_image = CloudinaryField("house_image")
+    house_description = models.TextField()
 
     def __str__(self):
 
