@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid ">
     <div class="main-navigation">
         <div class="container-fluid top-nav">
             <img src="http://www.masterhomes.co.ke/img/logo.jpg">
             <div class="top-right">
-                <div>
+                <div class="loc">
                     <div>
-                        phone image
+                        <img src="https://static.vecteezy.com/system/resources/previews/002/079/984/original/phone-icon-flat-style-isolated-on-grey-background-telephone-symbol-call-illustration-sign-for-web-and-mobile-app-free-vector.jpg" class='icons' alt="">
                     </div>
                     <div>
                         0712345644/072345678
                     </div>
     
                 </div>
-                <div>
+                <div class="loc">
                     <div>
-                        locationimage
+                        <img src="https://www.iconpacks.net/icons/2/free-location-icon-2950-thumb.png" alt="" class="icons">            
                     </div>
                     <div>
                         Nakuru,Kenya
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="lower-nav">
+        <div class="lower-nav container">
             <div>
                 <a href="">Home</a>
             </div>
@@ -34,7 +34,7 @@
                 <a href="">About US</a>
             </div>
             <div>
-                API Docs
+                <a href="">API</a>
             </div>
             <div>
                 <a href="">Gallery</a>
@@ -45,6 +45,12 @@
         </div>
     </div>
     <div class="hero">
+        <div class="latest">
+            <h2 align="center">Check out our latest:</h2>
+            
+            <h4 align="center"> hello: {{ latest.title }}</h4>
+        </div>
+        
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -53,13 +59,15 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
+                <img class="d-block w-100" src="{{latest.house_image.url}}"alt="First slide">
+              </div>
+
+        
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{{latest.house_image.url}}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
+                <img class="d-block w-100" src="{{latest.house_image.url}}" alt="Third slide" responsive >
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

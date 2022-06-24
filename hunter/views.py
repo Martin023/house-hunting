@@ -6,8 +6,14 @@ from django.contrib import messages
 # Create your views here.
 def home(request):
     houses = House.objects.all()
+    latest_item= houses.count()
+    latest_house = House.objects.get(id=latest_item)
+    context = {
+        'houses':houses,
+        'latest':latest_house
+    }
     
-    return render(request,'home.html',{'houses':houses})
+    return render(request,'home.html',context)
 
 def add_house(request):
     form = HouseForm()
