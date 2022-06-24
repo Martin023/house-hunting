@@ -32,3 +32,42 @@ img.icons{
     height: 100%;
     align-items: center;
 }
+
+
+.carousel-item img{
+    width: 70%!important;
+    margin:0 auto;
+}
+
+/* body part */
+
+/* about the latest house */
+
+.desc{
+    display: flex;
+    justify-content: center;
+
+}
+.abt{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding:5%;
+    gap: 2%;
+
+}
+.watch{
+    background-color: rgb(43, 46, 46);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: grid;
+    place-content:center ;
+    border-left: 1px;
+    color: #fff;
+}
+
+.house-specs{
+    
+}
