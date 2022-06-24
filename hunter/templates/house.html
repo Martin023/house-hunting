@@ -3,15 +3,82 @@
 {% block content %}
 
 <div class="container-fluid">
+    <div class="lower-nav container yeah">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <div>
+            <a href="/gallery">More Houses</a>
+        </div>
+        <div>
+            <a href="">About US</a>
+        </div>
+        <div>
+            <a href="">API</a>
+        </div>
+        <div>
+            <a href="/gallery">Gallery</a>
+        </div>
+        <div>
+            <a href="">Logout</a>
+        </div>
+    </div>
     
         <div class="houses">
-            {% for house in houses %}
-                <div class="card"></div>
+            <div>
+                <div class="welcome">
+                    <p align="center">Welcome to: {{ house.title }}</p>
+                </div>
+                <div class="main">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <img src="{{ house.house_image.url }}" alt="">
+                    </div>
+                    <div class="col-md-5 describe">
+                        <div>
+                            <p>{{ house.house_description }}</p>
+                        </div>
+                        <div>
+                            <a href="/" class="btn btn-primary">Contact owner</a>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div>
+                    <p><b>Location: </b>{{ house.house_location }}</p>
+                </div>
 
-                <p>{{ house.title }}</p>
-               </div>
-               
-            {% endfor %}
+
+                <div class=" container-fluid">
+                    <h5 align="center">Specs</h5>
+                    <div class="house_details">
+                     <div class="spec">
+                         <img src="{% static 'images/002-calendar.png' %}" alt="units">
+                         <strong><p align="center">Units: {{ house.units}}</p></strong>
+                     </div>
+                     <div class="spec">
+                         <img src="{% static 'images/bedroom.png' %}" alt="bedroom">
+                         <strong><p align="center">Bedrooms: {{ house.bedrooms}}</p></strong>
+                     </div>
+                     <div class="spec">
+                         <img src="{% static 'images/shower.png' %}" alt="shower">
+                         <strong><p align="center">Bathrooms: {{ house.bathrooms}}</p></strong>
+                     </div>
+                     <div class="spec">
+                         <img src="{% static 'images/sink.png' %}" alt="kitchen">
+                         <strong><p align="center">Kitchens: {{ house.kitchen}}</p></strong>
+                     </div>
+                     <div class="spec">
+                         <img src="{% static 'images/car.png' %}" alt="parking">
+                         <strong><p align="center">Parkings: {{ house.parking}}</p></strong>
+                     </div>
+                    
+                    </div>
+                    
+     
+     
+                </div>
+            </div>
         </div>
     
 </div>
