@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    
+    <div class="houses">
+
+        <div class="quote">
+            <blockquote class="blockquote">
+                <p class="mb-0">“Home is the starting place of love, hope and dreams".</p>
+                <br>
+                <footer class="blockquote-footer">1887 <cite title="Source Title">Me EST</cite></footer>
+             </blockquote>
+        </div>
+
+        {% for house in house %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ house.title }}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        
+           
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

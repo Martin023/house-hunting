@@ -3,8 +3,16 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div class="card">
-        
-    </div>
+    
+        <div class="houses">
+            {% for house in houses %}
+                <div class="card"></div>
+
+                <p>{{ house.title }}</p>
+               </div>
+               
+            {% endfor %}
+        </div>
+    
 </div>
 {% endblock %}

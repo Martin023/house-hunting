@@ -31,6 +31,9 @@
                 <a href="">Home</a>
             </div>
             <div>
+                <a href="/gallery">More Houses</a>
+            </div>
+            <div>
                 <a href="">About US</a>
             </div>
             <div>
@@ -48,7 +51,7 @@
         <div class="latest">
             <h2 align="center">Check out our latest:</h2>
             
-            <h4 align="center"> hello: {{ latest.title }}</h4>
+            <h4 align="center"> Welcome to: {{ latest.title }}</h4>
         </div>
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -86,8 +89,8 @@
         <h2 align="center">ABOUT THE PROPERTY</h2>
        </div>
        <div class="desc">
-           <p> Homes provide ......</p>
-           <p> located {{ latest.house_location }}</p>
+           <p align="center"> Homes provide ......</p>
+           <p align="center"> Location: {{ latest.house_location }}</p>
 
        </div>
        <div>
@@ -99,16 +102,150 @@
                 <a href="">Download Brochure</a>
                </div>
            </div>
-           <div class="house_details">
+           <div class=" container-fluid">
+               <h5 align="center">Specs</h5>
+               <div class="house_details">
+                <div class="spec">
+                    <img src="{% static 'images/002-calendar.png' %}" alt="units">
+                    <strong><p align="center">Units: {{ latest.units}}</p></strong>
+                </div>
+                <div class="spec">
+                    <img src="{% static 'images/bedroom.png' %}" alt="bedroom">
+                    <strong><p align="center">Bedrooms: {{ latest.bedrooms}}</p></strong>
+                </div>
+                <div class="spec">
+                    <img src="{% static 'images/shower.png' %}" alt="shower">
+                    <strong><p align="center">Bathrooms: {{ latest.bathrooms}}</p></strong>
+                </div>
+                <div class="spec">
+                    <img src="{% static 'images/sink.png' %}" alt="kitchen">
+                    <strong><p align="center">Kitchens: {{ latest.kitchen}}</p></strong>
+                </div>
+                <div class="spec">
+                    <img src="{% static 'images/car.png' %}" alt="parking">
+                    <strong><p align="center">Parkings: {{ latest.parking}}</p></strong>
+                </div>
+               
+               </div>
+               
+
 
            </div>
        </div>
     </div>
-    <div class="houses">
-        {% for house in houses %}
-        <p>{{ house.title }}</p>
-        {% endfor %}
+    <div class="nearby_amenities">
+        <div class="nearby_intro">
+            <h2 align="center"><strong>NEARBY </strong>AMENITIES</h2>
+            <p align="center">{{ latest.title }} is located close to essential public amenities that offer a great living and working environment</p>
+
+        </div>
+        <div class="amenity">
+            <div class="amenity_items">
+                <div class="amenity_icons">
+                    <img src="{% static 'images/education.png' %}" alt="school">
+                </div>
+                <div class="amenity_content">
+                    <p><b>Nakuru Highschool</b></p>
+                    <p><b>20 min from CBD</b></p>
+                    
+                </div>
+            </div>
+            <div class="amenity_items">
+                <div class="amenity_icons">
+                    <img src="{% static 'images/healthcare.png' %}" alt="hospital">
+                </div>
+                <div class="amenity_content">
+                    <p><b>Nakuru AnneX hospital</b></p>
+                    
+                    <p><b>2 Km from CBD</b> </p>
+                </div>
+            </div>
+            <div class="amenity_items">
+                <div class="amenity_icons">
+                    <img src="{% static 'images/hotel.png' %}" alt="recreation">
+                </div>
+                <div class="amenity_content">
+                    <p><b>Merica Hotel</b></p>
+                    <p>10 minutes away</p>
+                    
+                </div>
+            </div>
+            <!-- <div class="amenity_items">
+                <div class="amenity_icons">
+                    <img src="{% static 'images/education.png' %}" alt="">
+                </div>
+                <div class="amenity_content">
+                    <p><b></b></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div> -->
+
+        </div>
     </div>
+    
+    <div class="">
+        <div>
+            <img src="{% static 'images/map.png' %}" alt="map">
+
+        </div>
+        
+    </div>
+    <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="socials">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="/"> Masterhomes</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 </div>
 
 

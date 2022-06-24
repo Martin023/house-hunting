@@ -16,9 +16,13 @@
     justify-content: center;
     align-items: center;
     gap:15px;
-    background-color: rgba(34, 34, 145, 0.363);
+    background-color: rgba(9, 214, 36, 0.363);
     padding: 2%;
     max-width: fit-content;
+}
+.lower-nav a{
+    text-decoration: None;
+    color:#fff;
 }
 .latest{
     padding: 2%;
@@ -43,11 +47,11 @@ img.icons{
 
 /* about the latest house */
 
-.desc{
+/* .desc{
     display: flex;
     justify-content: center;
 
-}
+} */
 .abt{
     display: flex;
     justify-content: center;
@@ -58,16 +62,65 @@ img.icons{
 }
 .watch{
     background-color: rgb(43, 46, 46);
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 20%;
     padding-top: 2%;
     padding-bottom: 2%;
     display: grid;
     place-content:center ;
     border-left: 1px;
-    color: #fff;
+    text-decoration: None;
 }
 
-.house-specs{
+.house_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
+
+}
+.spec{
+    width:20%;
+    display: grid;
+    place-items: center;
+}
+.spec :hover{
+    cursor: pointer;
+
+}
+.spec img{
+    width:50%;
+}
+
+/* amenities section */
+.nearby_intro{
+    padding: 5%;
+}
+.amenity{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.amenity_items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+
+}
+.amenity_icons img{
+    width :50%;
+    
+}
+
+/* footer part */
+
+.socials{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote{
+    padding:10%;
+    display:flex;
 }

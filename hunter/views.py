@@ -15,6 +15,14 @@ def home(request):
     
     return render(request,'home.html',context)
 
+def all_houses(request):
+    house = House.objects.all()
+    context= {
+        'house':house,
+    }
+
+    return render(request,'all_houses.html',context)
+
 def add_house(request):
     form = HouseForm()
     context = {'form':form}
