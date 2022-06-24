@@ -6,12 +6,12 @@
 
 
 <div class=" forms ">
-    <div class=" addhouse">
+    <div class="container addhouse">
         <h4 align="center"style='margin-top:2%'>Add a House</h4>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
     
-            {{ form.as_p }}
+            {{ form|crispy }}
 
             <button type="submit" class="btn btn-sucess"> Add a house</button>
         </form>

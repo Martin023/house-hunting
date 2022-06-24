@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'hunter',
     'crispy_forms',
     "crispy_bootstrap5",
-    'fontawesomefree',
+   
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -96,6 +96,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+LOGIN_REDIRECT_URL = 'homepage'
+LOGIN_URL='login'
+LOGOUT_REDIRECT_URL = 'homepage'
 
 
 # Password validation
