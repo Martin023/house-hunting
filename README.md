@@ -40,8 +40,23 @@ source <virtual environment name>/bin/activate
 Install project requirements:
 ```
 pip3 install -r requirements.txt
-
 ```
+Replace environment varibles with your own
+```
+    django configurations 
+SECRET_KEY=
+
+    Postgrress database configurations 
+DB_NAME=
+DB_USER=
+DB_PASS=
+DB_HOST=
+
+    cloudinary configurations
+API_KEY=
+API_SECRET=
+```
+
 Run the project on a local server : The default is on port 8000
 ```
 python3 manage.py runserver <port>
@@ -54,7 +69,7 @@ The project should be running on the localhost as shown below
 
 To run tests 
 ```
-run test
+make test
 ```
 
 
